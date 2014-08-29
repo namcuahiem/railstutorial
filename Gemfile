@@ -4,10 +4,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
 
-gem 'pg', '0.15.1'
+
 
 group :development, :test do
 	gem 'rspec-rails', '2.13.1'
+	gem 'sqlite3'
 end
 
 group :test do
@@ -49,4 +50,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 group :production do
 	gem 'rails_12factor', '0.0.2'
+	gem 'pg', '0.15.1'
 end
+
+gem 'bootstrap-sass'

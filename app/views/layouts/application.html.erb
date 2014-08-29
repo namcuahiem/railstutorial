@@ -7,8 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<%= link_to "Rails tutorial", root_path, id: "logo" %>
+			<nav>
+				<ul class="nav pull-right">
+					<li><%= link_to "Home", home_path %></li>
+					<li><%= link_to "Help", help_path %></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="container">
+		<%= yield %>
+	</div>
+	<footer class="footer">
+	  <small>
+	    <a href="http://railstutorial.org/">Rails Tutorial</a>
+	    by Michael Hartl
+	  </small>
+	  <nav>
+	    <ul>
+	      <li><%= link_to "About",   '#' %></li>
+	      <li><%= link_to "Contact", '#' %></li>
+	      <li><a href="http://news.railstutorial.org/">News</a></li>
+	    </ul>
+	  </nav>
+	</footer>
 </body>
 </html>
